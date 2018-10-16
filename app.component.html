@@ -1,0 +1,35 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+		
+			<ul class="list-unstyled">
+				<li>
+				<form action="" class="form-horizontal">
+					<input type="text" name="txttodo" id="" class="form-group col-md-12" [(ngModel)]="task">
+					<button class="btn btn-primary btn-block form-group" (click)="addTask()">Add Task </button>
+				</form>
+				</li>
+			</ul>
+
+		</div>
+		
+		<div class="col-md-3 col-md-offset-2">
+			<h3>TOTAL TASKS {{countTasks}}</h3>
+			<ol class="">
+				<li *ngFor="let t of TaskList; let i = index;">{{t}}
+				<a href="javascript:;" (click)="removeTask(i)">X</a>
+				</li>
+			</ol>
+
+		</div>
+
+	</div>
+
+</div>
